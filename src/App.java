@@ -61,18 +61,29 @@ public class App {
                 resultList[resultList.length-1] = result;
             }
             */
-            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
+            System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
             String remove = a.next();
 
             if(remove.equals("remove")){
                 resultList.remove(0);
             }
+            System.out.print("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+            String inquiry = a.next();
+            String str = resultList.toString();
+            if(inquiry.equals("inquiry")){
+                for(int i = 0; i < resultList.size(); i++){
+                    System.out.println(resultList.get(i));
+                }
+            }
+
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료)");
+
             String more = a.next();
 
             if(more.equals("exit")) {
                 break;
             }
+
         }
     }
 }
