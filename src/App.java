@@ -1,12 +1,14 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in);
 
-        int [] resultList = new int[3];
+        //int [] resultList = new int[3];
 
         int lastIndex = 0;
+
+        ArrayList<Integer> resultList = new ArrayList<Integer> ();
 
         while (true) {
             System.out.print("첫번째 숫자를 입력하세요 : ");
@@ -41,14 +43,16 @@ public class App {
                     System.out.println("제대로 입력하세요...");
                     break;
             }
+
             System.out.println("결과 : " + result);
 
-            resultList[lastIndex] = result;
-            ++lastIndex;
-            int remain = 10 - lastIndex;
+            resultList.add(result);
+            //resultList[lastIndex] = result;
+            //++lastIndex;
+            //int remain = 10 - lastIndex;
 
-            System.out.println("저장 공간이 " + remain + " 남았습니다.");
-
+            //System.out.println("저장 공간이 " + remain + " 남았습니다.");
+            /*
             if(lastIndex > resultList.length-1){
                 System.out.println("저장 공간이 만땅이 되서 첫번째 결과값을 지우고 이번 결과 값을 넣었습니다.");
                 for(int i = 0; i < resultList.length-1; i++){
@@ -56,7 +60,13 @@ public class App {
                 }
                 resultList[resultList.length-1] = result;
             }
+            */
+            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
+            String remove = a.next();
 
+            if(remove.equals("remove")){
+                resultList.remove(0);
+            }
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료)");
             String more = a.next();
 
