@@ -47,6 +47,7 @@ public class App {
             if(remove.equals("remove")){
                 resultList.remove(0);
             }
+
             System.out.print("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             String inquiry = a.next();
             String str = resultList.toString();
