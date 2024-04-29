@@ -25,7 +25,7 @@ public class Calculator {
                 result = firstNum / secondNum;
                 break;
             default:
-                throw new ClacException("+, -, *, / 4개중 하나를 입력해주세요.");
+                throw new ClacException("+, -, *, / 4개중 하나를 입력해주세요... ㅠㅠ");
         }
         resultList.add(result);
         return result;
