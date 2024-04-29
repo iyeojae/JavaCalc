@@ -48,7 +48,7 @@ public class App {
 
             System.out.print("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             String inquiry = a.next();
-            String str = Calc.getCalc().toString();
+
             if(inquiry.equals("inquiry")){
                 for(int i = 0; i < Calc.getCalc().size(); i++){
                     System.out.println(Calc.getCalc().get(i));
