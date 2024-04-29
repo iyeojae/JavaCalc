@@ -39,5 +39,7 @@ public class Calculator {
         resultList.add(result);
     }
 
-
+    public void removeResult() {
+        resultList.remove(0);
+    }
 }

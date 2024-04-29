@@ -43,7 +43,7 @@ public class App {
             String remove = a.next();
 
             if(remove.equals("remove")){
-                Calc.getCalc().remove(0);
+                Calc.removeResult();
             }
 
             System.out.print("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
