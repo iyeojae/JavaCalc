@@ -9,6 +9,7 @@ public class App {
         int lastIndex = 0;
 
         ArrayList<Integer> resultList = new ArrayList<Integer> ();
+        Calculator Calc = new Calculator();
 
         while (true) {
             System.out.print("첫번째 숫자를 입력하세요 : ");
@@ -17,36 +18,15 @@ public class App {
             int secondNum = a.nextInt();
 
             a.nextLine();
-
-            System.out.print("사칙연산 기호를 입력하세요 : ");
-            String z = a.next();
-
-            int result = 0;
-            switch (z) {
-                case "+" :
-                    result = firstNum + secondNum;
-                    break;
-                case "-" :
-                    result = firstNum - secondNum;
-                    break;
-                case "*" :
-                    result = firstNum * secondNum;
-                    break;
-                case "/" :
-                    if(secondNum == 0) {
-                        System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
-                        break;
-                    }
-                    result = firstNum / secondNum;
-                    break;
-                default:
-                    System.out.println("제대로 입력하세요...");
-                    break;
+            try{
+                System.out.print("사칙연산 기호를 입력하세요 : ");
+                char math = a.next().charAt(0);
+                Calc.calculate(firstNum, secondNum, math);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
             }
 
-            System.out.println("결과 : " + result);
-
-            resultList.add(result);
+            resultList.add(Calc.result);
             //resultList[lastIndex] = result;
             //++lastIndex;
             //int remain = 10 - lastIndex;
