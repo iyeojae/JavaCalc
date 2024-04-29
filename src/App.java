@@ -7,8 +7,6 @@ public class App {
         //int [] resultList = new int[3];
 
         int lastIndex = 0;
-
-        ArrayList<Integer> resultList = new ArrayList<Integer> ();
         Calculator Calc = new Calculator();
 
         while (true) {
@@ -26,7 +24,7 @@ public class App {
                 System.out.println(e.getMessage());
             }
 
-            resultList.add(Calc.result);
+
             //resultList[lastIndex] = result;
             //++lastIndex;
             //int remain = 10 - lastIndex;
@@ -45,15 +43,15 @@ public class App {
             String remove = a.next();
 
             if(remove.equals("remove")){
-                resultList.remove(0);
+                Calc.resultList.remove(0);
             }
 
             System.out.print("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             String inquiry = a.next();
-            String str = resultList.toString();
+            String str = Calc.resultList.toString();
             if(inquiry.equals("inquiry")){
-                for(int i = 0; i < resultList.size(); i++){
-                    System.out.println(resultList.get(i));
+                for(int i = 0; i < Calc.resultList.size(); i++){
+                    System.out.println(Calc.resultList.get(i));
                 }
             }
 
