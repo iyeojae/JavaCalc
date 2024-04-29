@@ -50,9 +50,7 @@ public class App {
             String inquiry = a.next();
 
             if(inquiry.equals("inquiry")){
-                for(int i = 0; i < Calc.getCalc().size(); i++){
-                    System.out.println(Calc.getCalc().get(i));
-                }
+                Calc.inquiryResults();
             }
 
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료)");
