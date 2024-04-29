@@ -2,7 +2,11 @@ import java.util.ArrayList;
 
 public class Calculator {
     public int result;
-    private ArrayList<Integer> resultList = new ArrayList<Integer> ();
+    private ArrayList<Integer> resultList;
+    Calculator(){
+        result = 0;
+        resultList = new ArrayList<Integer> ();
+    }
     public int calculate(int firstNum, int secondNum, char math) throws ClacException{
         /* 위 요구사항에 맞게 구현 */
         /* return 연산 결과 */
