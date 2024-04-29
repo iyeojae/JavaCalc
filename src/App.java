@@ -39,7 +39,7 @@ public class App {
                 resultList[resultList.length-1] = result;
             }
             */
-            System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
+            System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까?(remove 입력 시 삭제)");
             String remove = a.next();
 
             if(remove.equals("remove")){
