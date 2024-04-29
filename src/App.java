@@ -43,15 +43,15 @@ public class App {
             String remove = a.next();
 
             if(remove.equals("remove")){
-                Calc.resultList.remove(0);
+                Calc.getCalc().remove(0);
             }
 
             System.out.print("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             String inquiry = a.next();
-            String str = Calc.resultList.toString();
+            String str = Calc.getCalc().toString();
             if(inquiry.equals("inquiry")){
-                for(int i = 0; i < Calc.resultList.size(); i++){
-                    System.out.println(Calc.resultList.get(i));
+                for(int i = 0; i < Calc.getCalc().size(); i++){
+                    System.out.println(Calc.getCalc().get(i));
                 }
             }
 

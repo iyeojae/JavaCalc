@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Calculator {
     public int result;
-    ArrayList<Integer> resultList = new ArrayList<Integer> ();
+    private ArrayList<Integer> resultList = new ArrayList<Integer> ();
     public int calculate(int firstNum, int secondNum, char math) throws ClacException{
         /* 위 요구사항에 맞게 구현 */
         /* return 연산 결과 */
@@ -30,4 +30,14 @@ public class Calculator {
         resultList.add(result);
         return result;
     }
+
+    public ArrayList getCalc() {
+        return resultList;
+    }
+
+    public void setCalc(int set) {
+        resultList.add(result);
+    }
+
+
 }
