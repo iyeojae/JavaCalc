@@ -27,7 +27,7 @@ public class App {
                     try{
                         System.out.print("사칙연산 기호를 입력하세요 : ");
                         char math = a.next().charAt(0);
-                        Arithmetic.calculateMath(firstNum, secondNum, math);
+                        Arithmetic.calculate(firstNum, secondNum, math);
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
@@ -51,7 +51,7 @@ public class App {
                     System.out.print("반지름을 입력하세요 : ");
                     double radius = a.nextDouble();
 
-                    Circle.calculateCircleArea(radius);
+                    Circle.calculate(radius);
 
                     System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까?(remove 입력 시 삭제)");
                     remove = a.next();
