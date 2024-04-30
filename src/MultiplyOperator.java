@@ -1,4 +1,4 @@
-public class MultiplyOperator implements get{
+public class MultiplyOperator implements operater{
     public int operate(int firstNum, int secondNum) {
         int result = firstNum * secondNum;
         return result;

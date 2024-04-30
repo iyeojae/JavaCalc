@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class ArithmeticCalculator extends Calculator{
     private ArrayList<Integer> resultListMath = new ArrayList<Integer> ();
-    get addOperator = new AddOperator();
-    get subtractOperator = new SubtractOperator();
-    get multiplyOperator = new MultiplyOperator();
-    get divideOperator = new DivideOperator();
-    get modOperator = new ModOperator();
+    operater addOperator = new AddOperator();
+    operater subtractOperator = new SubtractOperator();
+    operater multiplyOperator = new MultiplyOperator();
+    operater divideOperator = new DivideOperator();
+    operater modOperator = new ModOperator();
 
     public int calculate(int firstNum, int secondNum, char math) throws ClacException{
         /* 위 요구사항에 맞게 구현 */

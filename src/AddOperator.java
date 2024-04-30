@@ -1,4 +1,4 @@
-public class AddOperator implements get{
+public class AddOperator implements operater{
     public int operate(int firstNum, int secondNum) {
         int result = firstNum + secondNum;
         return result;
