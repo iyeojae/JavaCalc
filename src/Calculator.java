@@ -2,16 +2,44 @@ import java.util.ArrayList;
 
 public class Calculator {
     public int result;
-    private ArrayList<Integer> resultList;
+    private ArrayList<Integer> resultListMath;
+
+    private ArrayList<Integer> resultListCircle;
+
     Calculator(){
         result = 0;
-        resultList = new ArrayList<Integer> ();
+        resultListMath = new ArrayList<Integer> ();
+        resultListCircle = new ArrayList<Integer> ();
     }
-    public int calculate(int firstNum, int secondNum, char math) throws ClacException{
+
+    public double calculateCircleArea(double radius) {
+        double area = 0;
+        area = radius * radius * 3.14;
+        resultListCircle.add((int)area);
+        return area;
+    }
+
+    public ArrayList getCalcCircle() {
+        return resultListCircle;
+    }
+
+    public void setCalcCircle(int set) {
+        resultListCircle.add(result);
+    }
+
+    public void removeResultCircle() {
+        resultListCircle.remove(0);
+    }
+
+    public void inquiryResultsCircle() {
+        for(int i = 0; i < resultListCircle.size(); i++) {
+            System.out.println(resultListCircle.get(i));
+        }
+    }
+
+    public int calculateMath(int firstNum, int secondNum, char math) throws ClacException{
         /* 위 요구사항에 맞게 구현 */
         /* return 연산 결과 */
-
-
         switch (math) {
             case '+' :
                 result = firstNum + secondNum;
@@ -31,25 +59,25 @@ public class Calculator {
             default:
                 throw new ClacException("+, -, *, / 4개중 하나를 입력해주세요... ㅠㅠ");
         }
-        resultList.add(result);
+        resultListMath.add(result);
         return result;
     }
 
-    public ArrayList getCalc() {
-        return resultList;
+    public ArrayList getCalcMath() {
+        return resultListMath;
     }
 
-    public void setCalc(int set) {
-        resultList.add(result);
+    public void setCalcMath(int set) {
+        resultListMath.add(result);
     }
 
-    public void removeResult() {
-        resultList.remove(0);
+    public void removeResultMath() {
+        resultListMath.remove(0);
     }
 
-    public void inquiryResults() {
-        for(int i = 0; i < resultList.size(); i++){
-            System.out.println(resultList.get(i));
+    public void inquiryResultsMath() {
+        for(int i = 0; i < resultListMath.size(); i++){
+            System.out.println(resultListMath.get(i));
         }
     }
 }
