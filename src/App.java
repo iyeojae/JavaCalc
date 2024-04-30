@@ -11,7 +11,7 @@ public class App {
         ArithmeticCalculator Arithmetic = new ArithmeticCalculator();
 
         while (true) {
-            System.out.print("사칙 연산을 진행하고 싶으면 '1', 원의 넒이를 진행하고 싶으면 '2' 를 입력하세요: ");
+            System.out.print("오칙연산을 진행하고 싶으면 '1', 원의 넒이를 진행하고 싶으면 '2' 를 입력하세요: ");
             int mathOrCircle = a.nextInt();
             String remove;
             String inquiry;

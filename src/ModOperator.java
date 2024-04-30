@@ -1,6 +1,6 @@
-public class AddOperator implements get{
+public class ModOperator implements get{
     public int operate(int firstNum, int secondNum) {
-        int result = firstNum + secondNum;
+        int result = firstNum % secondNum;
         return result;
     }
 }

@@ -2,10 +2,12 @@ import java.util.ArrayList;
 
 public class ArithmeticCalculator extends Calculator{
     private ArrayList<Integer> resultListMath = new ArrayList<Integer> ();
-    AddOperator addOperator = new AddOperator();
-    SubtractOperator subtractOperator = new SubtractOperator();
-    MultiplyOperator multiplyOperator = new MultiplyOperator();
-    DivideOperator divideOperator = new DivideOperator();
+    get addOperator = new AddOperator();
+    get subtractOperator = new SubtractOperator();
+    get multiplyOperator = new MultiplyOperator();
+    get divideOperator = new DivideOperator();
+    get modOperator = new ModOperator();
+
     public int calculate(int firstNum, int secondNum, char math) throws ClacException{
         /* 위 요구사항에 맞게 구현 */
         /* return 연산 결과 */
@@ -26,6 +28,8 @@ public class ArithmeticCalculator extends Calculator{
                 }
                 result = divideOperator.operate(firstNum, secondNum);
                 break;
+            case '%' :
+                result = modOperator.operate(firstNum, secondNum);
             default:
                 throw new ClacException("+, -, *, / 4개중 하나를 입력해주세요... ㅠㅠ");
         }
